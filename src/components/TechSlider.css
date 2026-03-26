@@ -1,0 +1,157 @@
+.tech-slider-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+  padding: 80px 0;
+  color: white;
+  overflow: hidden;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tech-slider-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.tech-slider-header p {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.tech-slider-header h2 {
+  font-size: 2.8rem;
+  color: var(--primary-green);
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+
+.tech-slider-header .divider-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
+  margin: 0 auto 20px;
+}
+
+.tech-subtext {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #999 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  line-height: 1.7;
+}
+
+/* Slider Marquee Animation */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* Fading edges */
+.slider-container::before,
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #0a0a0a 0%, transparent 100%);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #0a0a0a 0%, transparent 100%);
+}
+
+.slider-track {
+  display: inline-block;
+  animation: slide 30s linear infinite;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  vertical-align: middle;
+}
+
+/* White card background for each logo */
+.logo-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.logo-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--primary-green);
+  transform: translateY(-4px);
+}
+
+.partner-logo {
+  height: 55px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.logo-card:hover .partner-logo {
+  opacity: 1;
+  filter: none;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-slider-header h2 {
+    font-size: 2rem;
+  }
+  .logo-card {
+    width: 150px;
+    height: 80px;
+    padding: 15px 25px;
+  }
+  .partner-logo {
+    height: 40px;
+    max-width: 120px;
+  }
+  .slider-container::before,
+  .slider-container::after {
+    width: 60px;
+  }
+}
