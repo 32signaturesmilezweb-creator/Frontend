@@ -92,9 +92,9 @@ const Hero = () => {
 
         <div className="container hero-banner-content">
           <div className="hero-text-area fade-in">
-            <h1><span className="highlight-text">Expert —</span><br/> Dental Implants</h1>
-            <p className="hero-subtext">You Can Trust Permanent,</p>
-            <h2 className="hero-secondary">Natural-Looking Implants<br/>Restore Your Smile...</h2>
+            <h1><span className="highlight-text">Premium —</span><br/> Dental Implants</h1>
+            <p className="hero-subtext">Permanent & Natural-Looking</p>
+            <h2 className="hero-secondary">Seamlessly Restore<br/>Your Confident Smile</h2>
             <button className="btn-primary" style={{marginTop: '20px'}} onClick={() => { document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' }); }}>Book Free Consultation</button>
           </div>
         </div>
