@@ -9,32 +9,41 @@
   gap: 60px;
 }
 
+/* IMAGE SECTION */
 .about-image-wrapper {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.doctor-image-placeholder {
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
+.doctor-image-container {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
   overflow: hidden;
+  border: 4px solid var(--primary-gold);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+/* subtle glow */
+.doctor-image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
 }
 
 .doctor-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top; /* 🔥 THIS FIXES IT */
   display: block;
 }
-.placeholder-content {
-  color: #555;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border: 2px dashed #333;
-  padding: 20px 40px;
-  border-radius: 12px;
-}
 
+/* CONTENT SECTION */
 .about-content {
   flex: 1.2;
 }
@@ -56,7 +65,7 @@
 
 .about-title {
   font-size: 2.6rem;
-  color: #f0f0f0;
+  color: #0b1f3a; /* fallback navy */
   line-height: 1.2;
   margin-bottom: 25px;
 }
@@ -69,6 +78,7 @@
   text-align: justify;
 }
 
+/* STATS (kept as-is if you add later) */
 .stats-container {
   display: flex;
   background-color: rgba(212, 175, 55, 0.06);
@@ -113,12 +123,16 @@
   background-color: rgba(0,0,0,0.1);
 }
 
+/* RESPONSIVE */
 @media (max-width: 992px) {
   .about-container {
     flex-direction: column;
+    text-align: center;
   }
-  .doctor-image-placeholder {
-    height: 400px;
+
+  .doctor-image-container {
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -127,9 +141,11 @@
     flex-wrap: wrap;
     gap: 20px 0;
   }
+
   .stat-box {
     flex: 0 0 50%;
   }
+
   .divider-right::after {
     display: none;
   }
@@ -139,16 +155,15 @@
 .gradient-text-animated {
   background: linear-gradient(
     to right, 
-    #ffffff, 
-    var(--primary-gold), 
-    var(--primary-gold), 
-    #ffffff
+    #0b1f3a,   /* deep navy */
+    #163d6b,   /* mid navy */
+    #0b1f3a
   );
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shine 4s linear infinite;
+  animation: shine 5s linear infinite;
 }
 
 @keyframes shine {

@@ -6,7 +6,8 @@ const SLIDES = [
   '/hero-slides/slide-1.jpg',
   '/hero-slides/slide-2.jpg',
   '/hero-slides/slide-3.jpg',
-  '/hero-slides/slide-4.jpg'
+  '/hero-slides/slide-4.jpg',
+  '/hero-slides/slide-5.jpg',
 ];
 
 const Hero = () => {
