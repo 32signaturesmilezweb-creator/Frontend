@@ -131,43 +131,88 @@ Modern dentistry offers a variety of filling materials such as composite resin, 
 ,
   // ✅ TOOTH DECAY
   'tooth-decay-dental-cavities': {
-    title: 'Tooth Decay / Dental Cavities',
-    subtitle: 'Effective treatment and prevention of cavities',
-    image: '/Dental-Decay-Dental-Cavity.webp',
-    intro: `Cavities are damaged areas in the hard outer layer (enamel) of teeth caused by acids produced by bacteria. They form small openings or holes due to decay from plaque buildup, leading to tooth deterioration if untreated.`,
+  title: 'Tooth Decay / Dental Cavities',
+  subtitle: 'Effective treatment and prevention of cavities',
+  image: '/Dental-Decay-Dental-Cavity.webp',
 
-    details: [
-      {
-        heading: 'Causes of Dental Cavities',
-        content: `1. Plaque Buildup
-2. Sugary Foods and Drinks
-3. Poor Oral Hygiene
-4. Acidic Foods and Beverages`
-      },
-      {
-        heading: 'Signs and Symptoms of Dental Cavities',
-        content: `1. Tooth Pain or Sensitivity
-2. Visible Holes or Pits
-3. Tooth Sensitivity
-4. Discoloration`
-      },
-      {
-        heading: 'Prevention of Dental Cavities',
-        content: `1. Regular Dental Checkups
-2. Effective Oral Hygiene Practices
-3. Balanced Diet
-4. Fluoride Treatments`
-      },
-      {
-        heading: 'Treatment Options for Dental Cavities',
-        content: `1. Fillings
-2. Dental Crowns
-3. Root Canal Treatment
-4. Preventive Care`
-      }
-    ],
-    faqs: []
-  },
+  intro: `Tooth decay, also known as dental cavities, is a common oral health problem that occurs when the hard outer layer of the tooth (enamel) is damaged by acids produced by bacteria. These bacteria feed on sugars and starches from food, forming plaque that gradually erodes the tooth surface.
+
+If left untreated, tooth decay can progress deeper into the tooth layers, affecting dentin and pulp, leading to pain, infection, and even tooth loss. Early detection and proper dental care can prevent serious complications and help maintain healthy teeth.`,
+
+  details: [
+
+    {
+      heading: "Causes of Dental Cavities",
+      content: `1. Plaque buildup on teeth due to poor brushing and flossing habits
+2. Frequent consumption of sugary foods like sweets, chocolates, and soft drinks
+3. Acidic foods and beverages that weaken tooth enamel
+4. Poor oral hygiene leading to bacterial growth
+5. Dry mouth (lack of saliva reduces natural protection)
+6. Not visiting the dentist regularly for checkups
+7. Deep grooves and pits in teeth that trap food particles
+8. Snacking frequently without cleaning teeth`
+    },
+
+    {
+      heading: "Signs and Symptoms of Dental Cavities",
+      content: `1. Toothache or spontaneous pain without clear reason
+2. Sensitivity to hot, cold, or sweet foods and drinks
+3. Visible holes or pits in the teeth
+4. Dark spots, brown or black discoloration on tooth surface
+5. Pain while biting or chewing
+6. Bad breath due to bacterial buildup
+7. Food getting stuck frequently in a specific tooth
+8. Swelling or infection in advanced stages`
+    },
+
+    {
+      heading: "Prevention of Dental Cavities",
+      content: `1. Brush your teeth twice daily using fluoride toothpaste
+2. Floss regularly to remove plaque between teeth
+3. Limit intake of sugary and sticky foods
+4. Drink plenty of water to wash away food particles
+5. Visit your dentist regularly for checkups and cleaning
+6. Use mouthwash to reduce bacteria
+7. Apply dental sealants for extra protection
+8. Maintain a balanced diet rich in calcium and vitamins`
+    },
+
+    {
+      heading: "Treatment Options for Dental Cavities",
+      content: `1. Dental fillings to restore minor cavities
+2. Dental crowns for severely damaged teeth
+3. Root canal treatment (RCT) when decay reaches the pulp
+4. Tooth extraction in cases of severe damage
+5. Fluoride treatments for early-stage decay
+6. Preventive care and regular monitoring
+7. Cosmetic restorations for improved appearance`
+    }
+
+  ],
+
+  faqs: [
+    {
+      q: 'What causes tooth decay?',
+      a: 'Tooth decay is mainly caused by plaque buildup, bacteria, sugary foods, and poor oral hygiene.'
+    },
+    {
+      q: 'Can cavities heal on their own?',
+      a: 'Early-stage decay can be reversed with fluoride and proper care, but advanced cavities require treatment.'
+    },
+    {
+      q: 'Is cavity treatment painful?',
+      a: 'No, modern dental treatments are painless as local anesthesia is used.'
+    },
+    {
+      q: 'How can I prevent cavities?',
+      a: 'Brush twice daily, floss regularly, limit sugar intake, and visit your dentist regularly.'
+    },
+    {
+      q: 'What happens if cavities are not treated?',
+      a: 'Untreated cavities can lead to severe pain, infection, root canal treatment, or even tooth loss.'
+    }
+  ]
+},
 
   // ✅ NEW: BAD BREATH / HALITOSIS
   'bad-breath-and-halitosis': {

@@ -1,9 +1,9 @@
 .consultation-section {
-  background-color: #F0F2F5;
+  background-color: #0a0a0a;
   padding: 80px 0;
-  color: var(--text-main);
+  color: #e8e8e8;
   position: relative;
-  background-image: radial-gradient(rgba(10, 25, 47, 0.04) 2px, transparent 2px);
+  background-image: radial-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
@@ -15,11 +15,27 @@
 .consultation-form-wrapper {
   width: 100%;
   max-width: 800px;
-  background-color: #FFFFFF;
+  background: linear-gradient(160deg, #141414 0%, #111111 100%);
   padding: 40px;
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 136, 0.15);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Neon top accent line */
+.consultation-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00FF88, #00ffb3, transparent);
+  border-radius: 2px;
 }
 
 .title-with-line {
@@ -28,6 +44,7 @@
   margin-bottom: 40px;
   position: relative;
   display: inline-block;
+  color: #ffffff;
 }
 .title-with-line::before {
   content: '';
@@ -45,10 +62,12 @@
 }
 .form-group label {
   display: block;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 10px;
-  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .form-group label span {
   color: var(--primary-gold);
@@ -57,18 +76,22 @@
 .dark-input, .dark-select {
   width: 100%;
   padding: 14px 18px;
-  background-color: #F8F9FA;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 136, 0.15);
+  border-radius: 10px;
+  color: #e8e8e8;
   font-family: 'Outfit', sans-serif;
   font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.dark-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .dark-select {
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2310b981%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2300FF88%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: right 15px top 50%;
   background-size: 12px auto;
@@ -77,12 +100,18 @@
 .dark-input:focus, .dark-select:focus {
   outline: none;
   border-color: var(--primary-gold);
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.12);
+  background: rgba(0, 255, 136, 0.04);
+}
+
+.dark-select option {
+  background: #141414;
+  color: #e8e8e8;
 }
 
 .helper-text {
   font-size: 0.9rem;
-  color: #aaa;
+  color: #666;
   margin-top: 15px;
 }
 
@@ -96,32 +125,37 @@
 
 .captcha-wrapper {
   display: flex;
-  background-color: #F8F9FA;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 136, 0.15);
+  border-radius: 10px;
   overflow: hidden;
 }
-.captcha-input { border: none; flex: 1; }
+.captcha-input {
+  border: none;
+  flex: 1;
+  background: transparent;
+  color: #e8e8e8;
+}
 .captcha-box {
   display: flex;
   align-items: center;
-  background-color: #F0F2F5;
+  background: rgba(0, 255, 136, 0.06);
   padding: 0 15px;
-  border-left: 1px solid #E2E8F0;
+  border-left: 1px solid rgba(0, 255, 136, 0.15);
 }
 .captcha-code {
   font-family: monospace;
   font-size: 1.2rem;
   letter-spacing: 3px;
-  color: var(--navy-blue);
+  color: #00FF88;
   margin-right: 15px;
-  background: #E8ECF0;
+  background: rgba(0, 255, 136, 0.1);
   padding: 4px 8px;
   border-radius: 4px;
 }
 .refresh-btn {
   background: none;
-  color: var(--navy-blue);
+  color: #00FF88;
   font-size: 1.4rem;
 }
 
@@ -130,21 +164,21 @@
   justify-content: center;
   padding: 16px;
   font-size: 1.1rem;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-top: 20px;
   margin-bottom: 25px;
 }
 
 .consent-text {
   font-size: 0.75rem;
-  color: #888;
+  color: rgba(255, 255, 255, 0.3);
   line-height: 1.6;
   text-align: justify;
 }
 
 .status-message {
   padding: 12px;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 20px;
   font-size: 0.95rem;
   font-weight: 500;
@@ -152,25 +186,28 @@
 }
 
 .status-message.success {
-  background-color: rgba(212, 175, 55, 0.15);
-  color: var(--primary-gold);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background-color: rgba(0, 255, 136, 0.1);
+  color: #00FF88;
+  border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
 .status-message.error {
-  background-color: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
-  border: 1px solid rgba(239, 68, 68, 0.4);
+  background-color: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .status-message.loading {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ccc;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #888;
 }
 
 @media (max-width: 900px) {
   .form-container {
     flex-direction: column;
+  }
+  .consultation-form-wrapper {
+    padding: 28px 20px;
   }
 }
 

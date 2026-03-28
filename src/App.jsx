@@ -20,7 +20,7 @@ import AdminBlogCreate from './pages/AdminBlogCreate';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import ClinicGallery from './pages/ClinicGallery';
-
+import AboutUs from './pages/AboutUs';
 function Home() {
   return (
     <>
@@ -55,6 +55,7 @@ function App() {
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/clinic" element={<ClinicGallery />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
       </div>
     </Router>

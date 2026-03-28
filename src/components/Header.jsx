@@ -97,7 +97,9 @@ const Header = () => {
               </li>
               <li className={location.pathname.startsWith('/blog') ? "active" : ""}><Link to="/blog" onClick={handleNavClick}>BLOG</Link></li>
               <li className={location.pathname.startsWith('/clinic') ? "active" : ""}><Link to="/clinic" onClick={handleNavClick}>OUR CLINICS</Link></li>
-              <li><a href="/#about" onClick={handleNavClick}>ABOUT US</a></li>
+              <li className={location.pathname === '/about' ? "active" : ""}>
+  <Link to="/about" onClick={handleNavClick}>ABOUT US</Link>
+</li>
             </ul>
           </nav>
         </div>

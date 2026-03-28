@@ -65,61 +65,149 @@
 
 .about-title {
   font-size: 2.6rem;
-  color: #0b1f3a; /* fallback navy */
+  color: #ffffff; /* fallback white on dark */
   line-height: 1.2;
   margin-bottom: 25px;
 }
 
 .about-description {
-  color: var(--text-muted);
+  color: #c8c8c8 !important;
   font-size: 1.05rem;
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 20px;
   text-align: justify;
+  opacity: 1 !important;
 }
 
-/* STATS CARD — Glassmorphism Navy */
+/* STATS CARD — Premium Glassmorphism Navy */
 .stats-container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  margin-top: 32px;
-  padding: 28px 32px;
-  border-radius: 18px;
+  gap: 0;
+  margin-top: 36px;
+  padding: 0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 
-  /* Glassmorphism */
-  background: rgba(10, 25, 47, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  /* Deep navy glass base */
+  background: linear-gradient(
+    135deg,
+    rgba(6, 18, 40, 0.92) 0%,
+    rgba(10, 25, 55, 0.88) 50%,
+    rgba(6, 18, 40, 0.92) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Layered glow & border */
+  border: 1px solid rgba(212, 175, 55, 0.3);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 8px 40px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(10, 25, 55, 0.6),
+    0 0 120px rgba(212, 175, 55, 0.08);
 }
 
+/* Animated shimmer border on top */
+.stats-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 136, 0.2) 20%,
+    rgba(0, 255, 136, 0.9) 50%,
+    rgba(0, 255, 136, 0.2) 80%,
+    transparent 100%
+  );
+  animation: statsShimmerBorder 4s linear infinite;
+}
+
+@keyframes statsShimmerBorder {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Radial spotlight glow in center */
+.stats-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(212, 175, 55, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Individual stat box */
 .stat-box {
   text-align: center;
   flex: 1;
+  padding: 28px 20px;
+  position: relative;
+  z-index: 1;
+  transition: background 0.35s ease;
+  cursor: default;
+}
+
+.stat-box:hover {
+  background: rgba(212, 175, 55, 0.06);
+}
+
+.stat-number-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
 .stat-box h3 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--primary-gold);
-  margin: 0 0 6px 0;
+  font-size: 2.4rem;
+  font-weight: 900;
   font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1;
+
+  /* Neon green gradient number */
+  background: linear-gradient(135deg, #00ffb3 0%, #00FF88 45%, #00CC6A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Neon green glow */
+  filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.55));
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.stat-box:hover h3 {
+  filter: drop-shadow(0 0 22px rgba(0, 255, 136, 0.9));
+  transform: scale(1.08);
 }
 
 .stat-box p {
   margin: 0;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
-  font-weight: 600;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
 }
 
+.stat-box:hover p {
+  color: rgba(0, 255, 136, 0.9);
+}
+
+/* Vertical gold divider between boxes */
 .divider-right {
   position: relative;
 }
@@ -128,11 +216,15 @@
   content: '';
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 55%;
+  top: 20%;
+  height: 60%;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(212,175,55,0.35), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 255, 136, 0.4),
+    transparent
+  );
 }
 
 /* RESPONSIVE */
@@ -163,17 +255,15 @@
   }
 }
 
-/* Gradient Text Animation — Dr. Deep Dutta */
+/* Gradient Text Animation — Dr. Deep Dutta — Neon Green */
 .gradient-text-animated {
   background: linear-gradient(
     90deg,
-    #0b1f3a 0%,
-    #b8882a 20%,
-    #d4af37 35%,
-    #f1c75b 50%,
-    #d4af37 65%,
-    #b8882a 80%,
-    #0b1f3a 100%
+    #00CC6A 0%,
+    #00FF88 25%,
+    #00ffb3 50%,
+    #00FF88 75%,
+    #00CC6A 100%
   );
   background-size: 250% auto;
   color: transparent;

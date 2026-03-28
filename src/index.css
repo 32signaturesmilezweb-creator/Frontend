@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary-gold: #D4AF37;
-  --primary-gold-hover: #B48E4B;
-  --navy-blue: #0A192F;
-  --navy-blue-light: #112240;
-  --dark-brown: #333333;
-  --darker-brown: #222222;
+  /* ── Neon Green Accent ── */
+  --primary-gold: #00FF88;           /* was gold, now neon green */
+  --primary-gold-hover: #00CC6A;     /* darker neon green for hover */
+  --neon-glow: rgba(0, 255, 136, 0.35);
+
+  /* ── Dark Backgrounds ── */
+  --navy-blue: #0a0a0a;              /* near-black */
+  --navy-blue-light: #141414;        /* slightly lighter dark */
+  --bg-main: #0d0d0d;               /* page background */
+  --bg-card: #161616;               /* card surface */
+  --bg-surface: #1e1e1e;            /* elevated surface */
+
+  /* ── Text ── */
+  --text-main: #e8e8e8;             /* primary readable text */
+  --text-muted: #888888;            /* secondary text */
+  --text-light: #F5F5F5;
+
+  /* ── Borders ── */
+  --border-color: #2a2a2a;
+
+  /* ── Legacy ── */
+  --dark-brown: #1a1a1a;
+  --darker-brown: #0f0f0f;
   --whatsapp-green: #25d366;
   --whatsapp-green-hover: #1eb956;
-  --light-cream: #F8F9FA;
-  --bg-main: #F8F9FA;
-  --bg-card: #FFFFFF;
-  --bg-surface: #F0F2F5;
-  --text-main: #1A1A1A;
-  --text-muted: #666666;
-  --text-light: #F5F5F5;
-  --border-color: #E2E8F0;
-  --neon-glow: rgba(212, 175, 55, 0.35);
+  --light-cream: #1a1a1a;
 }
 
 * {
@@ -71,6 +80,7 @@ button {
 
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
+  animation-fill-mode: forwards;
 }
 
 /* Utilities */

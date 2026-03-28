@@ -1,9 +1,14 @@
 .treatments-section {
   padding: 90px 0;
-  background: #F8F9FA;
+  background: #0d0d0d;
 }
 
-/* GRID (modern layout) */
+/* Section title */
+.treatments-section .section-title {
+  color: #ffffff;
+}
+
+/* GRID */
 .treatments-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -13,13 +18,13 @@
 /* CARD */
 .treatment-card {
   position: relative;
-  background: #FFFFFF;
+  background: linear-gradient(160deg, #141414 0%, #0f0f0f 100%);
   backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 25px 15px;
   text-align: center;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 255, 136, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.35s ease;
   cursor: pointer;
   display: flex;
@@ -36,8 +41,8 @@
   border-radius: 16px;
   padding: 1px;
   background: linear-gradient(120deg, var(--primary-gold), transparent);
-  -webkit-mask: 
-    linear-gradient(#000 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -46,8 +51,9 @@
 /* HOVER */
 .treatment-card:hover {
   transform: translateY(-10px) scale(1.04);
-  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
-  border-color: var(--primary-gold);
+  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.18);
+  border-color: rgba(0, 255, 136, 0.4);
+  background: linear-gradient(160deg, #161616 0%, #121212 100%);
 }
 
 /* ICON */
@@ -72,14 +78,14 @@
 .treatment-card h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--navy-blue);
+  color: #e8e8e8;
   margin-bottom: 4px;
 }
 
 /* DESCRIPTION */
 .treatment-desc {
   font-size: 12px;
-  color: var(--text-muted);
+  color: #888888;
   margin-bottom: 10px;
 }
 
@@ -107,7 +113,7 @@
 /* Button hover */
 .card-btn:hover {
   background: var(--primary-gold);
-  color: var(--navy-blue);
+  color: #0a0a0a;
   font-weight: 600;
 }
 
