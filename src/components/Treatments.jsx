@@ -2,182 +2,105 @@ import React from 'react';
 import './Treatments.css';
 import { motion } from 'framer-motion';
 
-/* ---------------- BASE ICONS ---------------- */
-
-const ToothOutline = () => (
-  <path d="M 30,35 C 30,20 45,20 50,30 C 55,20 70,20 70,35 C 70,55 65,70 60,85 C 58,90 55,90 53,80 C 51,70 50,65 50,65 C 50,65 49,70 47,80 C 45,90 42,90 40,85 C 35,70 30,55 30,35 Z"
-    fill="white" stroke="var(--primary-gold)" strokeWidth="3"/>
+const StandardTooth = ({ fill="#5ce1e6", stroke="none", strokeWidth="0" }) => (
+  <path 
+    d="M 33 25 C 20 25 25 45 30 55 C 33 62 35 72 38 82 C 40 88 45 88 47 80 C 49 70 50 63 50 63 C 50 63 51 70 53 80 C 55 88 60 88 62 82 C 65 72 67 62 70 55 C 75 45 80 25 67 25 C 58 25 50 35 50 35 C 50 35 42 25 33 25 Z" 
+    fill={fill} stroke={stroke} strokeWidth={strokeWidth}
+  />
 );
 
-const Shadow = () => (
-  <ellipse cx="50" cy="92" rx="25" ry="5" fill="rgba(212,175,55,0.1)" />
-);
-
-/* ---------------- ICONS ---------------- */
-
-/* Maxillofacial Surgery */
 const IconMaxillofacial = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <path d="M25,35 C25,20 75,20 75,35 L72,65 C72,75 65,82 50,82 C35,82 28,75 28,65 Z"
-      fill="white" stroke="var(--primary-gold)" strokeWidth="2.5" />
-    <line x1="35" y1="65" x2="65" y2="65" stroke="var(--primary-gold)" strokeWidth="1.5" />
-    <line x1="42" y1="65" x2="42" y2="72" stroke="var(--primary-gold)" strokeWidth="1.5" />
-    <line x1="50" y1="65" x2="50" y2="72" stroke="var(--primary-gold)" strokeWidth="1.5" />
-    <line x1="58" y1="65" x2="58" y2="72" stroke="var(--primary-gold)" strokeWidth="1.5" />
-    <line x1="46" y1="40" x2="54" y2="40" stroke="var(--primary-gold)" strokeWidth="2" strokeLinecap="round" />
-    <line x1="50" y1="36" x2="50" y2="44" stroke="var(--primary-gold)" strokeWidth="2" strokeLinecap="round" />
+    <path d="M 28 35 C 28 25 72 25 72 35 L 72 55 C 72 75 50 90 50 90 C 50 90 28 75 28 55 Z" fill="#5ce1e6"/>
+    <path d="M 50 35 L 50 45 M 45 40 L 55 40" stroke="#ffffff" strokeWidth="4" strokeLinecap="round"/>
+    <path d="M 38 60 L 62 60 M 38 68 L 62 68 M 46 60 L 46 68 M 54 60 L 54 68" stroke="#090e17" strokeWidth="2.5" strokeLinecap="round"/>
   </svg>
 );
 
-/* Minor Oral Surgeries */
 const IconMinorOralSurgery = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <ToothOutline />
-    <line x1="62" y1="18" x2="55" y2="50" stroke="var(--primary-gold)" strokeWidth="2.5" strokeLinecap="round"/>
-    <path d="M60,18 L65,20 L63,26 Z" fill="var(--primary-gold)" />
+    <StandardTooth fill="#ffffff" />
+    <path d="M 45 10 L 38 35" stroke="#5ce1e6" strokeWidth="4" strokeLinecap="round" />
+    <circle cx="68" cy="20" r="3" fill="#5ce1e6" />
   </svg>
 );
 
-/* Kids Dentistry */
 const IconKids = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <ToothOutline />
-    <circle cx="43" cy="42" r="3" fill="#000"/>
-    <circle cx="57" cy="42" r="3" fill="#000"/>
-    <path d="M42,55 C47,62 53,62 58,55" stroke="#000" strokeWidth="2" fill="none" strokeLinecap="round"/>
+    <StandardTooth fill="#ffffff" />
+    <circle cx="42" cy="40" r="3.5" fill="#090e17"/>
+    <circle cx="58" cy="40" r="3.5" fill="#090e17"/>
+    <path d="M 42 50 Q 50 60 58 50" fill="none" stroke="#090e17" strokeWidth="3.5" strokeLinecap="round"/>
   </svg>
 );
 
-/* Smile Makeover */
 const IconSmile = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <ToothOutline />
-    <path d="M40,55 C45,65 55,65 60,55" stroke="#000" fill="none" strokeWidth="2"/>
-    <circle cx="70" cy="25" r="3" fill="var(--primary-gold)"/>
-    <line x1="70" y1="18" x2="70" y2="32" stroke="var(--primary-gold)" strokeWidth="1.5"/>
-    <line x1="63" y1="25" x2="77" y2="25" stroke="var(--primary-gold)" strokeWidth="1.5"/>
+    <StandardTooth fill="#ffffff" />
+    <path d="M 35 45 Q 50 65 65 45" fill="none" stroke="#5ce1e6" strokeWidth="4" strokeLinecap="round"/>
+    <path d="M 75 15 Q 80 15 80 10 Q 80 15 85 15 Q 80 15 80 20 Q 80 15 75 15 Z" fill="#5ce1e6"/>
   </svg>
 );
 
-/* Root Canal */
-const IconRootCanal = () => (
-  <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <ToothOutline />
-    <line x1="50" y1="30" x2="50" y2="80"
-      stroke="var(--primary-gold)" strokeWidth="2" strokeLinecap="round"/>
-    <circle cx="50" cy="55" r="4" fill="var(--primary-gold)" opacity="0.6"/>
-  </svg>
-);
-
-/* Sports Dentistry */
 const IconSportsDentistry = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <path d="M20,42 C20,35 30,32 50,32 C70,32 80,35 80,42 L80,55 C80,68 65,75 50,75 C35,75 20,68 20,55 Z"
-      fill="white" stroke="var(--primary-gold)" strokeWidth="2.5"/>
-    <line x1="30" y1="53" x2="70" y2="53" stroke="var(--primary-gold)" strokeWidth="1.5"/>
-    <path d="M50,36 L55,42 L50,60 L45,42 Z"
-      fill="none" stroke="var(--primary-gold)" strokeWidth="1.5"/>
+    <path d="M 20 45 C 20 20 80 20 80 45 C 80 65 50 85 50 85 C 50 85 20 65 20 45 Z" fill="#5ce1e6"/>
+    <path d="M 25 50 Q 50 65 75 50" fill="none" stroke="#ffffff" strokeWidth="4" strokeLinecap="round"/>
+    <line x1="50" y1="40" x2="50" y2="57" stroke="#ffffff" strokeWidth="3" strokeLinecap="round"/>
   </svg>
 );
 
-/* Teeth Whitening - tooth with radiating shine lines */
 const IconWhitening = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <ToothOutline />
-    {/* Shine rays */}
-    <line x1="72" y1="20" x2="80" y2="12" stroke="var(--primary-gold)" strokeWidth="2" strokeLinecap="round"/>
-    <line x1="75" y1="28" x2="85" y2="26" stroke="var(--primary-gold)" strokeWidth="2" strokeLinecap="round"/>
-    <line x1="65" y1="15" x2="67" y2="5"  stroke="var(--primary-gold)" strokeWidth="2" strokeLinecap="round"/>
-    <circle cx="70" cy="22" r="5" fill="var(--primary-gold)" opacity="0.85"/>
+    <StandardTooth fill="#5ce1e6" />
+    <path d="M 42 35 L 42 55 M 50 30 L 50 60 M 58 35 L 58 55" stroke="#ffffff" strokeWidth="3" strokeLinecap="round"/>
+    <path d="M 20 25 Q 25 25 25 20 Q 25 25 30 25 Q 25 25 25 30 Q 25 25 20 25 Z" fill="#ffffff"/>
   </svg>
 );
 
-/* Porcelain Veneers - layered veneer on a tooth */
 const IconVeneers = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    <ToothOutline />
-    {/* Veneer overlay layer */}
-    <path d="M35,35 C35,28 50,26 65,35 L63,55 C58,62 42,62 37,55 Z"
-      fill="var(--primary-gold)" opacity="0.35" stroke="var(--primary-gold)" strokeWidth="1.5"/>
-    <path d="M38,37 C42,32 58,32 62,37" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+    <StandardTooth fill="#5ce1e6" />
+    <path d="M 33 25 C 20 25 25 45 30 55 C 33 62 35 72 38 82 C 40 88 45 88 47 80 C 49 70 50 63 50 63 L 50 25 C 42 25 33 25 33 25 Z" fill="#ffffff"/>
   </svg>
 );
 
-/* Dental Implants - screw post with crown */
 const IconImplants = () => (
   <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
     {/* Crown */}
-    <path d="M32,42 L68,42 L62,60 L38,60 Z"
-      fill="white" stroke="var(--primary-gold)" strokeWidth="2"/>
-    {/* Post/screw */}
-    <rect x="46" y="60" width="8" height="22" rx="2"
-      fill="var(--primary-gold)" opacity="0.8"/>
-    {/* Screw lines */}
-    <line x1="44" y1="66" x2="56" y2="66" stroke="white" strokeWidth="1.2"/>
-    <line x1="44" y1="72" x2="56" y2="72" stroke="white" strokeWidth="1.2"/>
-    <line x1="44" y1="78" x2="56" y2="78" stroke="white" strokeWidth="1.2"/>
+    <path d="M 33 25 C 20 25 30 40 35 45 L 65 45 C 70 40 80 25 67 25 C 58 25 50 35 50 35 C 50 35 42 25 33 25 Z" fill="#ffffff"/>
+    {/* Screw */}
+    <path d="M 42 50 L 58 50 L 54 85 L 46 85 Z" fill="#5ce1e6" />
+    <path d="M 41 55 L 59 55 M 43 65 L 57 65 M 44 75 L 56 75" stroke="#090e17" strokeWidth="3" strokeLinecap="round"/>
   </svg>
 );
 
-/* Invisible Braces - aligner arch */
-const IconInvisibleBraces = () => (
-  <svg viewBox="0 0 100 100" className="tooth-svg">
-    <Shadow />
-    {/* Upper aligner */}
-    <path d="M18,40 C18,22 82,22 82,40 L80,52 C80,58 65,64 50,64 C35,64 20,58 18,52 Z"
-      fill="white" stroke="var(--primary-gold)" strokeWidth="2"/>
-    {/* Teeth bumps on top */}
-    <path d="M26,40 L32,32 L40,40" fill="none" stroke="var(--primary-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M40,40 L50,30 L60,40" fill="none" stroke="var(--primary-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M60,40 L68,32 L74,40" fill="none" stroke="var(--primary-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    {/* Transparency hint */}
-    <path d="M22,48 C30,56 70,56 78,48" fill="none" stroke="var(--primary-gold)" strokeWidth="1" strokeDasharray="4 3" opacity="0.6"/>
-  </svg>
-);
-
-/* ---------------- ANIMATION ---------------- */
+const treatmentsData = [
+  { id: 1, title: 'Maxillofacial Surgery',   desc: 'Jaw, face & oral surgery',         icon: <IconMaxillofacial /> },
+  { id: 2, title: 'Minor Oral Surgeries',    desc: 'Safe & precise oral procedures',   icon: <IconMinorOralSurgery /> },
+  { id: 3, title: 'Kids Dentistry',          desc: 'Gentle care for children',          icon: <IconKids /> },
+  { id: 4, title: 'Smile Makeover',          desc: 'Complete smile transformation',     icon: <IconSmile /> },
+  { id: 5, title: 'Sports Dentistry',        desc: 'Dental protection for athletes',    icon: <IconSportsDentistry /> },
+  { id: 6, title: 'Teeth Whitening',         desc: 'Brighten your smile',               icon: <IconWhitening /> },
+  { id: 7, title: 'Porcelain Veneers',       desc: 'Perfect ceramic smile shells',      icon: <IconVeneers /> },
+  { id: 8, title: 'Dental Implants',         desc: 'Permanent tooth replacement',       icon: <IconImplants /> },
+];
 
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.08 }
+    transition: { staggerChildren: 0.1 }
   }
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 120 }
+    transition: { type: "spring", stiffness: 100 }
   }
 };
-
-/* ---------------- DATA ---------------- */
-
-const treatmentsData = [
-  { id: 1,  title: 'Maxillofacial Surgery',   desc: 'Jaw, face & oral surgery',         icon: <IconMaxillofacial /> },
-  { id: 2,  title: 'Minor Oral Surgeries',    desc: 'Safe & precise oral procedures',   icon: <IconMinorOralSurgery /> },
-  { id: 3,  title: 'Kids Dentistry',          desc: 'Gentle care for children',          icon: <IconKids /> },
-  { id: 4,  title: 'Smile Makeover',          desc: 'Complete smile transformation',     icon: <IconSmile /> },
-  { id: 5,  title: 'Root Canal',              desc: 'Pain relief & tooth saving',        icon: <IconRootCanal /> },
-  { id: 6,  title: 'Sports Dentistry',        desc: 'Dental protection for athletes',    icon: <IconSportsDentistry /> },
-  { id: 7,  title: 'Teeth Whitening',         desc: 'Brighten your smile',               icon: <IconWhitening /> },
-  { id: 8,  title: 'Porcelain Veneers',       desc: 'Perfect ceramic smile shells',      icon: <IconVeneers /> },
-  { id: 9,  title: 'Dental Implants',         desc: 'Permanent tooth replacement',       icon: <IconImplants /> },
-  { id: 10, title: 'Invisible Braces',        desc: 'Clear & comfortable aligners',      icon: <IconInvisibleBraces /> },
-];
-
-/* ---------------- COMPONENT ---------------- */
 
 const Treatments = () => {
   return (
@@ -190,19 +113,18 @@ const Treatments = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           {treatmentsData.map((item) => (
             <motion.div
               key={item.id}
               className="treatment-card"
               variants={cardVariants}
-              whileHover={{ y: -10, scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
+              whileHover={{ y: -5, scale: 1.02 }}
             >
               <div className="treatment-icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <p className="treatment-desc">{item.desc}</p>
-              <button className="card-btn">Learn More →</button>
             </motion.div>
           ))}
         </motion.div>

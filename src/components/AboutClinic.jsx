@@ -24,11 +24,11 @@ const AboutClinic = () => {
           </div>
 
           <h2 className="about-title gradient-text-animated">
-            Dr. Deep Dutta
+            Dr. Deep Datta
           </h2>
 
           <p className="about-description">
-            At the heart of <strong>32 Signature Smilez</strong> is <strong>Dr. Deep Dutta</strong>, a highly accomplished{' '}
+            At the heart of <strong>32 Signature Smilez</strong> is <strong>Dr. Deep Datta</strong>, a highly accomplished{' '}
             <strong>Oral &amp; Maxillofacial Surgeon and Implantologist</strong> with over{' '}
             <strong>18+ years of clinical and surgical excellence</strong>. Renowned for his precision and patient-first approach,
             he specializes in <strong>facial trauma management, dental implantology, orthognathic surgery, and cleft lip &amp; palate correction</strong>,
@@ -37,7 +37,7 @@ const AboutClinic = () => {
 
           <p className="about-description">
             With an outstanding track record of <strong>500+ successful dental implant procedures</strong> and{' '}
-            <strong>175+ cleft surgeries</strong>, Dr. Dutta brings unmatched expertise backed by collaborations with{' '}
+            <strong>175+ cleft surgeries</strong>, Dr. Datta brings unmatched expertise backed by collaborations with{' '}
             <strong>Smile Train, BSF Tripura, RBSK</strong>, and leading tertiary care institutions. His work reflects a perfect blend of{' '}
             <strong>advanced surgical technology</strong> and <strong>compassionate patient care</strong>.
           </p>
