@@ -18,6 +18,7 @@ import TreatmentPage from './pages/TreatmentPage';
 import AdminBlogList from './pages/AdminBlogList';
 import AdminBlogCreate from './pages/AdminBlogCreate';
 import AdminGallery from './pages/AdminGallery';
+import AdminReviews from './pages/AdminReviews';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import ClinicGallery from './pages/ClinicGallery';
@@ -53,6 +54,7 @@ function App() {
           <Route path="/admin/blogs" element={<AdminBlogList />} />
           <Route path="/admin/blog/new" element={<AdminBlogCreate />} />
           <Route path="/admin/gallery" element={<AdminGallery />} />
+          <Route path="/admin/reviews" element={<AdminReviews />} />
           
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:id" element={<BlogPost />} />
