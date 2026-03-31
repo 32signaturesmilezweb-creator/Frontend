@@ -57,3 +57,12 @@
   color: var(--primary-gold);
   border-color: var(--primary-gold);
 }
+
+@media (max-width: 600px) {
+  .modal-overlay {
+    padding: 15px;
+  }
+  .modal-box {
+    max-height: 95vh;
+  }
+}

@@ -153,3 +153,28 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-gold-hover);
 }
+
+/* Global Mobile Responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .btn-primary, .btn-dark {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

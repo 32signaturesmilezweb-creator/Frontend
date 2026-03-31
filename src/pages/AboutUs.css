@@ -625,19 +625,21 @@
    RESPONSIVE
    ═══════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .au-who-gallery { grid-template-columns: 1fr; height: 340px; }
-  .au-gallery-side { display: none; }
+  .au-who-gallery { grid-template-columns: 1fr; height: auto; gap: 12px; }
+  .au-gallery-main { height: 350px; }
+  .au-gallery-side { flex-direction: row; height: 180px; }
 }
 
 @media (max-width: 900px) {
   .au-hero-content h1 { font-size: 2.2rem; }
   .au-who { grid-template-columns: 1fr; gap: 36px; }
-  .au-who-gallery { height: 280px; }
+  .au-gallery-main { height: 280px; }
+  .au-gallery-side { height: 140px; }
   .au-mv-grid { grid-template-columns: 1fr; }
   .au-why-grid { grid-template-columns: 1fr 1fr; }
-  .au-clinic-mosaic { grid-template-columns: 1fr; height: auto; }
+  .au-clinic-mosaic { grid-template-columns: 1fr; height: auto; gap: 16px; }
   .au-mosaic-big { height: 280px; }
-  .au-mosaic-stack { display: none; }
+  .au-mosaic-stack { flex-direction: row; height: 140px; }
   .au-stats-inner { flex-wrap: wrap; gap: 8px; }
   .au-stat { flex: 45%; }
 }

@@ -395,8 +395,8 @@
     display: none;
   }
 
-  /* Adjust spacer to only account for top-bar + main-nav (~120px) */
+  /* Adjust spacer to account for top-bar + main-nav when stacked */
   .header-spacer {
-    height: 120px;
+    height: 165px;
   }
 }

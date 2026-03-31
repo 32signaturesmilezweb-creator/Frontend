@@ -93,7 +93,9 @@ const ReviewModal = ({ isOpen, onClose }) => {
           borderRadius: '16px',
           width: '100%',
           maxWidth: '500px',
-          padding: '30px',
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          padding: '25px',
           border: '1px solid rgba(0, 255, 136, 0.2)',
           boxShadow: '0 25px 50px rgba(0,0,0,0.8), 0 0 40px rgba(0,255,136,0.05)',
           position: 'relative'

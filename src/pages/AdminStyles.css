@@ -248,22 +248,51 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
-    padding: 15px 20px;
+    padding: 15px 10px;
   }
+  
+  /* Force the navigation wrapper to wrap on mobile */
+  .dashboard-header > div:last-child {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .admin-dashboard .btn-dark, .dashboard-header .logout-btn {
+    font-size: 0.85rem !important;
+    padding: 6px 12px !important;
+  }
+
+  /* Force table headers to stack if they use inline flex */
+  .table-header {
+    flex-direction: column !important;
+    gap: 15px;
+    text-align: center;
+    padding: 15px;
+  }
+
   .dashboard-content {
-    padding: 20px 15px;
+    padding: 20px 10px;
   }
+  
   .stats-row {
     flex-direction: column;
   }
+  
   .table-container {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
   }
+  
   .admin-table th, .admin-table td {
     padding: 10px 15px;
     font-size: 0.85rem;
+    white-space: nowrap; /* Prevent horizontal crunching */
   }
+  
   .login-card {
     padding: 30px 20px;
+    margin: 15px;
   }
 }
