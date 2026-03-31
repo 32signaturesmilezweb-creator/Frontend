@@ -10,7 +10,7 @@ const AboutClinic = () => {
         <div className="about-image-wrapper fade-in">
           <div className="doctor-image-container animated-border">
             <img
-              src="/Placeholder.png"
+              src="/Deep Datta.PNG"
               alt="Dr. Deep Dutta"
               className="doctor-image"
             />

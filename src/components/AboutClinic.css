@@ -17,13 +17,15 @@
 }
 
 .doctor-image-container {
-  width: 420px;
-  height: 420px;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 /* 🔥 Rotating Gradient Border */
 .doctor-image-container.animated-border::before {
@@ -70,7 +72,7 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top;
+  object-position: center 15%;
   position: relative;
   z-index: 2;
 }

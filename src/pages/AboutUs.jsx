@@ -202,7 +202,7 @@ const AboutUs = () => {
             <p>Book a free consultation with our expert team and discover what's possible for your smile.</p>
             <div className="au-cta-btns">
               <button onClick={() => setBookingOpen(true)} className="au-btn-primary" style={{ border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>Book Free Consultation →</button>
-              <a href="tel:+919856883519" className="au-btn-outline">📞 Call Now</a>
+              <a href="tel:+919077770586" className="au-btn-outline">📞 Call Now</a>
             </div>
           </div>
         </section>
